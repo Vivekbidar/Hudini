@@ -95,9 +95,9 @@
 			<version>1.7.5</version>
 		</dependency>
 		<dependency>
-			<groupId>Elevate20</groupId>
-            <artifactId>Elevate20</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+			<groupId>QA</groupId>
+			<artifactId>Hudini</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<build>
