@@ -7,12 +7,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="io.stage.hudinielevate.cms.tests.DesignConfigsTest">
+      <class name="io.stage.hudinielevate.cms.tests.TvChannelsPageTest">
         <methods>
-          <include name="verifyAddComponentsTest"/>
+          <include name="VerifyNewCategoryDeactivateTest"/>
+          <include name="tearDown"/>
+          <include name="VerifyNewChannelCreationTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- io.stage.hudinielevate.cms.tests.DesignConfigsTest -->
+      </class> <!-- io.stage.hudinielevate.cms.tests.TvChannelsPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -38,7 +38,7 @@ public class TvChannelsPage extends BaseClass{
 	private By tvChannelsLnk = By.xpath("//div[@title='TV Channels']");
 	private By addBouquetBtn = By.xpath("//span[text()='Add Bouquet']");
 
-	//WebElements of details page
+	//WebElements of Bouquet page
 	private By bouquetNameTxtBx = By.id("bouquet_name_input");
 	private By bouquetCodeTxtBx=By.id("bouquet_code_input");
 	private By selectFloorsDpDwnOptions=By.id("select_floor(s)_select");
@@ -51,6 +51,9 @@ public class TvChannelsPage extends BaseClass{
 	private By selectLocationsDpDwnSearchField=By.xpath("//input[@placeholder='Search']");
 	private By selectLocationsDpDwnChkBx=By.xpath("//input[@type='checkbox']");
 	private By addBtn=By.xpath("//span[text()='Add']");
+	private By bouquetCreationToastMessage = By.xpath("//div[text()='Bouquet created successfully']");
+	private By bouquetEditToastMessage = By.xpath("//div[text()='Bouquet updated successfully']");
+	private By bouquetDeleteToastMessage = By.xpath("//div[text()='Bouquet deleted successfully']");
 
 	//WebElements of category page
 	private By categoryTb=By.xpath("//span[text()='Category']");
@@ -58,6 +61,10 @@ public class TvChannelsPage extends BaseClass{
 	private By categoryNameTxtField=By.id("category_name_input");
 	private By categoryCodeTxtField=By.id("category_code_input");
 	private By activeChkBx=By.xpath("//input[@type='checkbox']");
+	private By categoryCreationToastMessage = By.xpath("//div[text()='Category created successfully']");
+	private By categoryEditToastMessage = By.xpath("//div[text()='Category updated successfully']");
+	private By categoryDeactivateToastMessage = By.xpath("//div[text()='Category deactivated successfully']");
+	private By categoryDeleteToastMessage = By.xpath("//div[text()='Category deleted successfully']");
 
 	//WebElements of channels page
 	private By channelsTb=By.xpath("//span[text()='Channels']");
@@ -75,6 +82,10 @@ public class TvChannelsPage extends BaseClass{
 	private By ipAddressTxtField=By.id("ip_address_input");
 	private By portTxtField=By.id("port_input");
 	private By nextBtn=By.xpath("//span[text()='Next']");
+	private By channelCreationToastMessage = By.xpath("//div[text()='Channel created successfully']");
+	private By channelEditToastMessage = By.xpath("//div[text()='Channel updated successfully']");
+	private By channelDeactivateToastMessage = By.xpath("//div[text()='Channel deactivated successfully']");
+	private By channelDeleteToastMessage = By.xpath("//div[text()='Channel deleted successfully']");
 
 	//Temprovary data
 	private By tempOptionSelection=By.xpath("//span[text()='302']/../..//input[@type='checkbox']");
@@ -95,6 +106,7 @@ public class TvChannelsPage extends BaseClass{
 	private By confirmDeleteBtn = By.xpath("//span[text()='Delete']");
 	private By searchResultTxtForDelete = By.xpath("//p[text()='0-0 of 0']");
 
+
 	//webelements for deactivate scenarios
 	private By deactivateBtn = By.xpath("//*[text()='Deactivate']");
 	private By InactiveText=By.xpath("//span[text()='Inactive']");
@@ -113,7 +125,7 @@ public class TvChannelsPage extends BaseClass{
 		this.tvChannelsLnk = tvChannelsLnk;
 	}
 
-	//getter and setter method of details page
+	//getter and setter method of bouquet page
 	public By getAddBouquetBtn() {
 		return addBouquetBtn;
 	}
@@ -231,6 +243,30 @@ public class TvChannelsPage extends BaseClass{
 	public void setActiveChkBx(By activeChkBx) {
 		this.activeChkBx = activeChkBx;
 	}
+	public By getCategoryCreationToastMessage() {
+		return categoryCreationToastMessage;
+	}
+	public void setCategoryCreationToastMessage(By categoryCreationToastMessage) {
+		this.categoryCreationToastMessage = categoryCreationToastMessage;
+	}
+	public By getCategoryEditToastMessage() {
+		return categoryEditToastMessage;
+	}
+	public void setCategoryEditToastMessage(By categoryEditToastMessage) {
+		this.categoryEditToastMessage = categoryEditToastMessage;
+	}
+	public By getcategoryDeactivateToastMessage() {
+		return categoryDeactivateToastMessage;
+	}
+	public void setcategoryDeactivateToastMessage(By categoryActivateToastMessage) {
+		this.categoryDeactivateToastMessage = categoryActivateToastMessage;
+	}
+	public By getCategoryDeleteToastMessage() {
+		return categoryDeleteToastMessage;
+	}
+	public void setCategoryDeleteToastMessage(By categoryDeleteToastMessage) {
+		this.categoryDeleteToastMessage = categoryDeleteToastMessage;
+	}
 
 	//getter and setter method of channel page
 	public By getChannelsTb() {
@@ -323,6 +359,30 @@ public class TvChannelsPage extends BaseClass{
 	public void setNextBtn(By nextBtn) {
 		this.nextBtn = nextBtn;
 	}
+	public By getChannelCreationToastMessage() {
+		return channelCreationToastMessage;
+	}
+	public void setChannelCreationToastMessage(By channelCreationToastMessage) {
+		this.channelCreationToastMessage = channelCreationToastMessage;
+	}
+	public By getChannelEditToastMessage() {
+		return channelEditToastMessage;
+	}
+	public void setChannelEditToastMessage(By channelEditToastMessage) {
+		this.channelEditToastMessage = channelEditToastMessage;
+	}
+	public By getChannelDeactivateToastMessage() {
+		return channelDeactivateToastMessage;
+	}
+	public void setChannelDeactivateToastMessage(By channelDeactivateToastMessage) {
+		this.channelDeactivateToastMessage = channelDeactivateToastMessage;
+	}
+	public By getChannelDeleteToastMessage() {
+		return channelDeleteToastMessage;
+	}
+	public void setChannelDeleteToastMessage(By channelDeleteToastMessage) {
+		this.channelDeleteToastMessage = channelDeleteToastMessage;
+	}
 
 	//getter and setter methods for common webelements
 	public By getTvChannelsSearchTxtBx() {
@@ -337,6 +397,12 @@ public class TvChannelsPage extends BaseClass{
 	public void setEllipsisBtn(By ellipsisBtn) {
 		this.ellipsisBtn = ellipsisBtn;
 	}
+	public By getBouquetCreationToastMessage() {
+		return bouquetCreationToastMessage;
+	}
+	public void setBouquetCreationToastMessage(By bouquetCreationToastMessage) {
+		this.bouquetCreationToastMessage = bouquetCreationToastMessage;
+	}
 
 	//getter and setter methods for edit scenario
 	public By getEditBtn() {
@@ -350,6 +416,12 @@ public class TvChannelsPage extends BaseClass{
 	}
 	public void setUpdateBtn(By updateBtn) {
 		this.updateBtn = updateBtn;
+	}
+	public By getBouquetEditToastMessage() {
+		return bouquetEditToastMessage;
+	}
+	public void setBouquetEditToastMessage(By bouquetEditToastMessage) {
+		this.bouquetEditToastMessage = bouquetEditToastMessage;
 	}
 
 	//getter and setter methods for delete scenario
@@ -370,6 +442,12 @@ public class TvChannelsPage extends BaseClass{
 	}
 	public void setSearchResultTxtForDelete(By searchResultTxtForDelete) {
 		this.searchResultTxtForDelete = searchResultTxtForDelete;
+	}
+	public By getBouquetDeleteToastMessage() {
+		return bouquetDeleteToastMessage;
+	}
+	public void setBouquetDeleteToastMessage(By bouquetDeleteToastMessage) {
+		this.bouquetDeleteToastMessage = bouquetDeleteToastMessage;
 	}
 
 	//getter and setter methods for deactivate scenario
@@ -423,23 +501,11 @@ public class TvChannelsPage extends BaseClass{
 			e.printStackTrace();
 		}
 		elementActions.clickOnElement(getAddBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 1, 0));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isNewBouquetsCreated = elementActions.checkIfElementIsPresent(getEllipsisBtn());
+		boolean isNewBouquetsCreated = elementActions.checkIfElementIsPresent(getBouquetCreationToastMessage());
 		return isNewBouquetsCreated;
 	}
 
 	//edit created Bouquets
-
 	public boolean editBouquet() {
 		try {
 			Thread.sleep(2000);
@@ -502,18 +568,7 @@ public class TvChannelsPage extends BaseClass{
 			e.printStackTrace();
 		}
 		elementActions.clickOnElement(getUpdateBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 2, 0));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isBouquetsEdited = elementActions.checkIfElementIsPresent(getEllipsisBtn());
+		boolean isBouquetsEdited = elementActions.checkIfElementIsPresent(getBouquetEditToastMessage());
 		return isBouquetsEdited;
 	}
 
@@ -538,18 +593,7 @@ public class TvChannelsPage extends BaseClass{
 			e.printStackTrace();
 		}
 		elementActions.clickOnElement(getConfirmDeleteBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 1, 0));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isBouquetsDeleted = elementActions.checkIfElementIsPresent(getSearchResultTxtForDelete());
+		boolean isBouquetsDeleted = elementActions.checkIfElementIsPresent(getBouquetDeleteToastMessage());
 		return isBouquetsDeleted;
 
 	}
@@ -562,18 +606,7 @@ public class TvChannelsPage extends BaseClass{
 		elementActions.sendKeysElement(getCategoryCodeTxtField(), ExcelUtil.fetchData("TvChannels", 1, 6));
 		elementActions.clickOnElement(getActiveChkBx());
 		elementActions.clickOnElement(getAddBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 1, 5));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isCategoryCreated = elementActions.checkIfElementIsPresent(getEllipsisBtn());
+		boolean isCategoryCreated = elementActions.checkIfElementIsPresent(getCategoryCreationToastMessage());
 		return isCategoryCreated;
 	}
 
@@ -588,18 +621,7 @@ public class TvChannelsPage extends BaseClass{
 		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 2, 5));
 		elementActions.clickOnElement(getEllipsisBtn());
 		elementActions.clickOnElement(getDeactivateBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 2, 5));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isCategoryDeactivated = elementActions.checkIfElementIsPresent(getInactiveText());
+		boolean isCategoryDeactivated = elementActions.checkIfElementIsPresent(getcategoryDeactivateToastMessage());
 		return isCategoryDeactivated;
 	}
 
@@ -621,18 +643,7 @@ public class TvChannelsPage extends BaseClass{
 		elementActions.sendKeysElement(getCategoryCodeTxtField(), ExcelUtil.fetchData("TvChannels", 2, 6));
 		elementActions.clickOnElement(getActiveChkBx());
 		elementActions.clickOnElement(getUpdateBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 2, 5));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isCategoryEdited = elementActions.checkIfElementIsPresent(getEllipsisBtn());
+		boolean isCategoryEdited = elementActions.checkIfElementIsPresent(getCategoryEditToastMessage());
 		return isCategoryEdited;
 	}
 
@@ -648,18 +659,7 @@ public class TvChannelsPage extends BaseClass{
 		elementActions.clickOnElement(getEllipsisBtn());
 		elementActions.clickOnElement(getDeleteBtn());
 		elementActions.clickOnElement(getConfirmDeleteBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 2, 5));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isCategoryDeleted = elementActions.checkIfElementIsPresent(getSearchResultTxtForDelete());
+		boolean isCategoryDeleted = elementActions.checkIfElementIsPresent(getCategoryDeleteToastMessage());
 		return isCategoryDeleted;
 	}
 
@@ -686,18 +686,7 @@ public class TvChannelsPage extends BaseClass{
 		elementActions.sendKeysElement(getPortTxtField(), ExcelUtil.fetchData("TvChannels", 1, 12));
 		elementActions.clickOnElement(getNextBtn());
 		elementActions.clickOnElement(getAddBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 1, 7));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isChannelCreated = elementActions.checkIfElementIsPresent(getEllipsisBtn());
+		boolean isChannelCreated = elementActions.checkIfElementIsPresent(getChannelCreationToastMessage());
 		return isChannelCreated;
 	}
 
@@ -714,18 +703,7 @@ public class TvChannelsPage extends BaseClass{
 
 		elementActions.clickOnElement(getEllipsisBtn());
 		elementActions.clickOnElement(getDeactivateBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 2, 7));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isChannelDeactivated = elementActions.checkIfElementIsPresent(getInactiveText());
+		boolean isChannelDeactivated = elementActions.checkIfElementIsPresent(getChannelDeactivateToastMessage());
 		return isChannelDeactivated;
 	}
 
@@ -756,18 +734,7 @@ public class TvChannelsPage extends BaseClass{
 		elementActions.sendKeysElement(getPortTxtField(), ExcelUtil.fetchData("TvChannels", 2, 12));
 		elementActions.clickOnElement(getNextBtn());
 		elementActions.clickOnElement(getUpdateBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 2, 7));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isChannelEdited = elementActions.checkIfElementIsPresent(getEllipsisBtn());
+		boolean isChannelEdited = elementActions.checkIfElementIsPresent(getChannelEditToastMessage());
 		return isChannelEdited;	
 	}
 
@@ -783,18 +750,7 @@ public class TvChannelsPage extends BaseClass{
 		elementActions.clickOnElement(getEllipsisBtn());
 		elementActions.clickOnElement(getDeleteBtn());
 		elementActions.clickOnElement(getConfirmDeleteBtn());
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		elementActions.sendKeysElement(getTvChannelsSearchTxtBx(), ExcelUtil.fetchData("TvChannels", 2, 7));
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		boolean isChannelDeleted = elementActions.checkIfElementIsPresent(getSearchResultTxtForDelete());
+		boolean isChannelDeleted = elementActions.checkIfElementIsPresent(getChannelDeleteToastMessage());
 		return isChannelDeleted;
 	}
 }

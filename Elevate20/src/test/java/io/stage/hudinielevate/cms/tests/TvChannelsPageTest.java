@@ -44,7 +44,7 @@ public class TvChannelsPageTest {
 		System.out.println(properties.getProperty("superadminpassword"));
 		loginPage = new LoginPage(driver, properties);
 	}
-	@Test(enabled = false, priority = 1)
+	@Test(enabled = true, priority = 1)
 	public void VerifyNewBouquetCreationTest() {
 		loginPage.loginAsUser();
 		propertiesPage = loginPage.navigateToPropertiesPage();
@@ -53,7 +53,8 @@ public class TvChannelsPageTest {
 		boolean isNewBouquetsCreated = tvChannelsPage.createNewBouquet();
 		Assert.assertTrue(isNewBouquetsCreated,"New Bouquet is not created");
 	}
-	@Test(enabled = false, priority = 2)
+	
+	@Test(enabled = true, priority = 2)
 	public void VerifyNewBouquetEditTest() {
 		loginPage.loginAsUser();
 		propertiesPage = loginPage.navigateToPropertiesPage();
@@ -62,8 +63,8 @@ public class TvChannelsPageTest {
 		boolean isBouquetsEdited = tvChannelsPage.editBouquet();
 		Assert.assertTrue(isBouquetsEdited," Bouquet is not edited");
 	}
-	
-	@Test(enabled = false,priority = 11)
+
+	@Test(enabled = true,priority = 11)
 	public void VerifyNewBouquetDeleteTest() {
 		loginPage.loginAsUser();
 		propertiesPage = loginPage.navigateToPropertiesPage();
@@ -72,9 +73,9 @@ public class TvChannelsPageTest {
 		boolean isBouquetsDeleted = tvChannelsPage.deleteBouquet();
 		Assert.assertTrue(isBouquetsDeleted," Bouquet is not deleted");
 	}
-	
-	
-	@Test(enabled = false, priority = 3)                         
+
+
+	@Test(enabled = true, priority = 3)                         
 	public void VerifyNewCategoryCreationTest() {                            
 		loginPage.loginAsUser();                                
 		propertiesPage = loginPage.navigateToPropertiesPage();  
@@ -83,8 +84,8 @@ public class TvChannelsPageTest {
 		boolean isCategoryCreated = tvChannelsPage.createNewCategory();
 		Assert.assertTrue(isCategoryCreated," New Category is not created");
 	}
-	
-	@Test(enabled = false,priority = 9)
+
+	@Test(enabled = true,priority = 9)
 	public void VerifyNewCategoryDeactivateTest() {                            
 		loginPage.loginAsUser();                                
 		propertiesPage = loginPage.navigateToPropertiesPage();  
@@ -93,8 +94,8 @@ public class TvChannelsPageTest {
 		boolean isCategoryDeactivated = tvChannelsPage.deactivateCategory();
 		Assert.assertTrue(isCategoryDeactivated," New Category is not deactivated");
 	}
-	
-	@Test(enabled = false,priority = 4)
+
+	@Test(enabled = true,priority = 4)
 	public void VerifyNewCategoryEditedTest() {                            
 		loginPage.loginAsUser();                                
 		propertiesPage = loginPage.navigateToPropertiesPage();  
@@ -103,8 +104,8 @@ public class TvChannelsPageTest {
 		boolean isCategoryEdited = tvChannelsPage.editCategory();
 		Assert.assertTrue(isCategoryEdited," New Category is not edited");
 	}
-	
-	@Test(enabled = false,priority = 10)
+
+	@Test(enabled = true,priority = 10)
 	public void VerifyNewCategoryDeletedTest() {                            
 		loginPage.loginAsUser();                                
 		propertiesPage = loginPage.navigateToPropertiesPage();  
@@ -113,8 +114,8 @@ public class TvChannelsPageTest {
 		boolean isCategoryDeleted = tvChannelsPage.deleteCategory();
 		Assert.assertTrue(isCategoryDeleted," New Category is not deleted");
 	}
-	
-	@Test(enabled = false,priority = 5)
+
+	@Test(enabled = true,priority = 5)
 	public void VerifyNewChannelCreationTest() {                            
 		loginPage.loginAsUser();                                
 		propertiesPage = loginPage.navigateToPropertiesPage();  
@@ -123,8 +124,8 @@ public class TvChannelsPageTest {
 		boolean isCategoryDeleted = tvChannelsPage.createNewChannels();
 		Assert.assertTrue(isCategoryDeleted," New Channel is not created");
 	}
-	
-	@Test(enabled = false,priority = 7)
+
+	@Test(enabled = true,priority = 7)
 	public void VerifyNewChannelDeactivateTest() {                            
 		loginPage.loginAsUser();                                
 		propertiesPage = loginPage.navigateToPropertiesPage();  
@@ -133,8 +134,8 @@ public class TvChannelsPageTest {
 		boolean isChannelDeactivated = tvChannelsPage.deactivateChannels();
 		Assert.assertTrue(isChannelDeactivated," New Channel is not deactivated");
 	}
-	
-	@Test(enabled = false,priority = 6)
+
+	@Test(enabled = true,priority = 6)
 	public void VerifyNewChannelEditTest() {                            
 		loginPage.loginAsUser();                                
 		propertiesPage = loginPage.navigateToPropertiesPage();  
@@ -143,8 +144,8 @@ public class TvChannelsPageTest {
 		boolean isChannelEdited = tvChannelsPage.editChannels();
 		Assert.assertTrue(isChannelEdited," New Channel is not edited");
 	}
-	
-	@Test(enabled = false,priority = 8)
+
+	@Test(enabled = true,priority = 8)
 	public void VerifyNewChannelDeleteTest() {                            
 		loginPage.loginAsUser();                                
 		propertiesPage = loginPage.navigateToPropertiesPage();  
@@ -153,8 +154,8 @@ public class TvChannelsPageTest {
 		boolean isChannelDeleted = tvChannelsPage.deleteChannels();
 		Assert.assertTrue(isChannelDeleted," New Channel is not deleted");
 	}
-	
-	
+
+
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
